@@ -12,6 +12,7 @@ namespace SpaceInvadersPractice
         public Player ship;
         GameObjectList invaders;
         GameObjectList bullets;
+        Score score;
         private int invaderSize = 9;
 
         public PlayingState()
@@ -19,10 +20,12 @@ namespace SpaceInvadersPractice
             ship = new Player();
             invaders = new GameObjectList();
             bullets = new GameObjectList();
+            score = new Score();
 
             this.Add(ship);
             this.Add(invaders);
             this.Add(bullets);
+            this.Add(score);
 
             for (int i = 0; i < invaderSize; i++)
             {
@@ -54,7 +57,7 @@ namespace SpaceInvadersPractice
                     {
                         bullet.Visible = false;
                         invader.Visible = false;
-                        //score.ScoreValue += 10;
+                        score.ScoreValue += 10;
                     }
                 }
 

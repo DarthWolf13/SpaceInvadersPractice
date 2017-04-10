@@ -9,7 +9,7 @@ namespace SpaceInvadersPractice
 {
     class PlayingState : GameObjectList
     {
-        Player ship;
+        public Player ship;
         GameObjectList invaders;
         GameObjectList bullets;
         private int invaderSize = 9;
@@ -36,7 +36,7 @@ namespace SpaceInvadersPractice
         {
             base.HandleInput(inputHelper);
 
-            if (inputHelper.IsKeyDown(Keys.Space))
+            if (inputHelper.KeyPressed(Keys.Space))
             {
                 this.bullets.Add(new Bullet(ship.Position.X, ship.Position.Y));
             }

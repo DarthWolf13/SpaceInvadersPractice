@@ -30,7 +30,8 @@ namespace SpaceInvadersPractice
             this.SetFullScreen(false);
 
             gameStateManager.AddGameState("PlayingState", new PlayingState());
-            gameStateManager.SwitchTo("PlayingState");
+            gameStateManager.AddGameState("TitleScreenState", new TitleScreenState());
+            gameStateManager.SwitchTo("TitleScreenState");
 
         }
     }

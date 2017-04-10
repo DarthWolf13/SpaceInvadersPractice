@@ -10,7 +10,7 @@ namespace SpaceInvadersPractice
     class Player : SpriteGameObject
     {
         Vector2 StartPosition;
-        int speed = 500;
+        private int speed = 500;
 
         public Player() : base("ship")
         {

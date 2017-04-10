@@ -7,9 +7,13 @@ namespace SpaceInvadersPractice
 {
     class PlayingState : GameObjectList
     {
+        Player ship;
+
         public PlayingState()
         {
+            ship = new Player();
 
+            this.Add(ship);
         }
     }
 }
